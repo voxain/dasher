@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Dasher - Dashboard</title>
+        <link rel="stylesheet" href="../global/style.css" />
+        <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css" />
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="../global/dropdown.js"></script>
+    </head>
+    <body>
+        <div class="main-header">
+            <div class="splitter-three left">
+                <div class="header-dropdown">
+                    <span class="sidebar-icon dropdown-icon mdi mdi-windows mdi-36px"></span>
+                    Viper-Battlestation
+                    <span class="sidebar-icon dropdown-icon right mdi mdi-menu-down mdi-36px"></span>
+                </div>
+            </div>
+            <div class="splitter-three center"><img class="header-logo" src="../global/assets/svg/dasher_logo-dark.svg"></div>
+            <div class="splitter-three right"><span class="sidebar-icon dropdown-icon header-icon right mdi mdi-settings mdi-36px"></span></div>
+        </div>
+
+        <div class="main-sidebar">
+            <div class="sidebar-entry selected">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-arrow-up-drop-circle-outline mdi-48px"></span>
+                </div>
+                <b>Status</b> Online
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 100%; background: #4cb050;"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-clock-outline mdi-48px"></span>
+                </div>
+                <b>Uptime</b> 128d 5h 25m
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 100%; background: #4cb050;"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-chip mdi-48px"></span>
+                </div>
+                <b>CPU</b> Intel Core i9-9900K
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-memory mdi-48px"></span>
+                </div>
+                <b>RAM</b> 32GiB/64GiB
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-expansion-card mdi-48px"></span>
+                </div>
+                <b>GPU</b> Nvidia Quadro 4000
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-lan mdi-48px"></span>
+                </div>
+                <b>LAN <span class="mdi mdi-numeric-1-circle-outline"></span></b> <span class="mdi mdi-chevron-up">250MBit/s</span> <span class="mdi mdi-chevron-down">250MBit/s</span>
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-lan mdi-48px"></span>
+                </div>
+                <b>LAN <span class="mdi mdi-numeric-2-circle-outline"></span></b> <span class="mdi mdi-chevron-up">250MBit/s</span> <span class="mdi mdi-chevron-down">250MBit/s</span>
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-harddisk mdi-48px"></span>
+                </div>
+                <b>M.2 <span class="mdi mdi-numeric-1-circle-outline"></span></b> 60GB/1TB
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-harddisk mdi-48px"></span>
+                </div>
+                <b>SATA <span class="mdi mdi-numeric-1-circle-outline"></span></b> 500GB/10TB
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-harddisk mdi-48px"></span>
+                </div>
+                <b>SATA <span class="mdi mdi-numeric-2-circle-outline"></span></b> 500GB/10TB
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
+                    <span class="mdi mdi-harddisk mdi-48px"></span>
+                </div>
+                <b>SATA <span class="mdi mdi-numeric-3-circle-outline"></span></b> 500GB/10TB
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 50%"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <span class="headline">Viper-Battlestation</span><br>
+            ONLINE<br><br>
+            <div class="big-button red">
+                <span class="mdi mdi-power mdi-36px"></span>
+            </div>
+            <div class="big-button yellow">
+                <span class="mdi mdi-refresh mdi-36px"></span>
+            </div>
+        </div>
+
+        <div class="dropdown" id="drop-machines">
+            <div class="dropdown-entry">
+                <span class="sidebar-icon dropdown-icon mdi mdi-windows mdi-36px"></span>
+                Viper-Battlestation <span class="small-headline">127.0.0.1</span>
+            </div>
+            <div class="dropdown-entry">
+                <span class="sidebar-icon dropdown-icon mdi mdi-debian mdi-36px"></span>
+                APOLLO <span class="small-headline">123.456.789.001</span>
+            </div>
+            <div class="dropdown-entry">
+                <span class="sidebar-icon dropdown-icon mdi mdi-debian mdi-36px"></span>
+                VOYAGER <span class="small-headline">192.168.0.1</span>
+            </div>
+            <div class="dropdown-entry">
+                <span class="sidebar-icon dropdown-icon mdi mdi-arch mdi-36px"></span>
+                DDos-machine <span class="small-headline">1.1.1.1</span>
+            </div>
+            <div class="dropdown-entry">
+                <span class="sidebar-icon dropdown-icon mdi mdi-apple mdi-36px"></span>
+                Erik's iLag <span class="small-headline">8.8.8.8</span>
+            </div>
+            <div class="dropdown-entry">
+                <span class="sidebar-icon dropdown-icon mdi mdi-cellphone-android mdi-36px"></span>
+                SM-G950F <span class="small-headline">o2 Mobile</span>
+            </div>
+        </div>
+    </body>
+</html>

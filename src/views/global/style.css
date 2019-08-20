@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito&display=swap');
+
+body, html{
+    font-family: 'Nunito';
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    color: #444;
+}
+
+.main-header{
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    position: sticky;
+    top:0;
+    left:0;
+}
+
+.main-sidebar{
+    width: 350px;
+    height: calc(100% - 60px);
+    position: fixed;
+    bottom: 0;
+    background: #fff;
+    left: 0;
+    overflow: hidden;
+    overflow-y:auto;
+}
+.main-sidebar::-webkit-scrollbar{
+    display: none
+}
+
+.main-content{
+    width: calc(100% - 350px);
+    height: calc(100% - 60px);
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    background: #f4f4f4;
+    box-sizing: border-box;
+    padding: 20px;
+}
+
+.header-logo{
+    height: 30px;
+    margin-top: 15px;
+}
+
+.header-dropdown{
+    height: 50px;
+    line-height: 50px;
+    margin: 5px;
+    width: auto;
+    border-radius: 6px;
+    transition: .2s ease;
+    display: inline-block;
+}
+.header-dropdown:hover{
+    background: #dddddf;
+    cursor: pointer;
+}
+
+
+.splitter-three{
+    width: 33.33%;
+    height: 100%;
+    float: left;
+}
+
+.splitter-three.center{
+    text-align: center;
+}
+.splitter-three.right{
+    text-align: right;
+}
+
+
+.sidebar-entry{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-size: 14px;
+    transition: .2s ease;
+}
+.sidebar-entry:hover{
+    cursor: pointer;
+    background: #ddd
+}
+.sidebar-entry.selected{
+    background: #dddddf;
+}
+b{font-size: 20px;}
+
+.sidebar-icon{
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    margin-right: 20px;
+    margin-bottom: 7px;
+    float: left;
+}
+.sidebar-icon.dropdown-icon{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    margin: 0;
+}
+.header-icon{
+    width: 60px !important;
+    height: 60px !important;
+    line-height: 60px !important;
+}
+.dropdown-icon.right{
+    float: right;
+}
+
+.load-bar-outer{
+    width: 260px;
+    height: 7px;
+    background: #bbb;
+    border-radius: 10px;
+    margin-top:4px;
+    margin-bottom:4px;
+    overflow: hidden;
+    position: relative;
+    right: 0;
+}
+.load-bar-inner{
+    height: 100%;
+    float: left;
+    background: #008fff;
+}
+
+.load-bar-outer.vertical{
+    width: 7px;
+    height: 50px;
+    display: inline-block;
+    margin-right: 4px;
+}
+.load-bar-inner.vertical{
+    width: 7px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+}
+
+
+.dropdown{
+    width: 340px;
+    height: auto;
+    position: fixed;
+    left: 5px;
+    top: 60px;
+    background: #fff;
+    border-radius: 6px;
+    box-shadow: 0px 4px 14px rgba(0,0,0,.2), 0px 1px 4px rgba(0,0,0,.1);
+    display: none;
+    overflow: hidden;
+    animation: popIn .25s ease;
+    max-height: 500px;
+    overflow: hidden;
+    overflow-y: auto;
+}
+.dropdown::-webkit-scrollbar{display: none}
+.dropdown.visible{
+    display: block;
+}
+
+.dropdown-entry{
+    white-space: nowrap;
+    overflow: hidden;
+    height: 56px;
+    line-height: 50px;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 3px;
+    transition: .1s ease;
+}
+.dropdown-entry:hover{
+    cursor: pointer;
+    /*background: #dddddf;*/
+    color: #008fff
+}
+
+@keyframes popIn{
+    0%{opacity: 0; transform: translateY(-10px) scale(.95)}
+    100%{opacity: 1; transform: translateY(0px) scale(1)}
+}
+
+.small-headline{
+    font-size: 14px;
+    color: #888;
+}
+.headline{
+    font-size: 32px;
+    color: #333;
+    font-weight: 600
+}
+
+
+.big-button{
+    width: 36px;
+    height: 36px;
+    padding: 5px;
+    border-radius: 100px;
+    box-shadow: 0px 4px 10px rgba(0,0,0,.1);
+    display: inline-block;
+    margin-right: 10px;
+}
+.big-button.red{
+    color: #f00;
+}
+.big-button.yellow{
+    color: #ffd000;
+}
