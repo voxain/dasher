@@ -207,9 +207,17 @@ b{font-size: 20px;}
     height: 36px;
     padding: 5px;
     border-radius: 100px;
-    box-shadow: 0px 4px 10px rgba(0,0,0,.1);
+    box-shadow: 0px 6px 10px rgba(0,0,0,.3);
     display: inline-block;
     margin-right: 10px;
+    transition: .2s ease;
+}
+.big-button:hover{
+    cursor: pointer;
+    box-shadow: 0px 10px 15px rgba(0,0,0,.2);
+}
+.big-button:active{
+    box-shadow: 0px 2px 4px rgba(0,0,0,.2);
 }
 .big-button.red{
     color: #f00;
