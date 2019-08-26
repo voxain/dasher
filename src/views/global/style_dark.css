@@ -1,0 +1,64 @@
+
+body, html{
+    color: #eee;
+}
+
+.main-header{
+    background: #202020;
+}
+
+.main-sidebar{
+    background: #161618;
+}
+
+.main-content{
+    background: #1c1d1f;
+}
+
+.header-logo{
+    padding: 7px;
+    background: white;
+    margin-top: 8px;
+    border-radius: 7px;
+}
+
+.header-dropdown:hover{
+    background: #334;
+    cursor: pointer;
+}
+.sidebar-entry:hover{
+    cursor: pointer;
+    background: #333334;
+}
+.sidebar-entry.selected{
+    background: #444445;
+}
+
+.load-bar-outer{
+    background: #555556;
+}
+
+.dropdown{
+    background: #1c1d1f;
+}
+
+.small-headline{
+    color: #777;
+}
+.headline{
+    font-size: 32px;
+    color: #eee;
+    font-weight: 600
+}
+
+.content-header{
+    background: #232325;
+}
+
+.splitter-wrapper{
+    background: #232325;
+}
+
+.splitter-three.solid{
+    background: #343436;
+}

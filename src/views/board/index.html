@@ -4,10 +4,12 @@
         <meta charset="utf-8">
         <title>Dasher - Dashboard</title>
         <link rel="stylesheet" href="../global/style.css" />
+        <link rel="stylesheet" id="dark_theme" />
         <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css" />
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="../global/dropdown.js"></script>
+        <script src="../global/themes.js"></script>
     </head>
     <body>
         <div class="main-header">
@@ -19,7 +21,10 @@
                 </div>
             </div>
             <div class="splitter-three center"><img class="header-logo" src="../global/assets/svg/dasher_logo-dark.svg"></div>
-            <div class="splitter-three right"><span class="sidebar-icon dropdown-icon header-icon right mdi mdi-settings mdi-36px"></span></div>
+            <div class="splitter-three right">
+                <span class="sidebar-icon dropdown-icon header-icon right mdi mdi-settings mdi-36px"></span>
+                <span class="sidebar-icon dropdown-icon header-icon right mdi mdi-brightness-4 mdi-36px" id="theme_switcher"></span>
+            </div>
         </div>
 
         <div class="main-sidebar">
@@ -125,14 +130,24 @@
         </div>
 
         <div class="main-content">
-            <span class="headline">Viper-Battlestation</span><br>
-            ONLINE<br><br>
-            <div class="big-button red" onclick="modal({preset: 'shutdown'})">
-                <span class="mdi mdi-power mdi-36px"></span>
+            <div class="content-header">
+                <span class="headline">Viper-Battlestation</span>
+                ONLINE
+                <div class="big-button red" onclick="modal({preset: 'shutdown'})">
+                    <span class="mdi mdi-power mdi-36px"></span>
+                </div>
+                <div class="big-button yellow">
+                    <span class="mdi mdi-refresh mdi-36px"></span>
+                </div>
             </div>
-            <div class="big-button yellow">
-                <span class="mdi mdi-refresh mdi-36px"></span>
-            </div>
+
+            <br>All systems full power!<br><br>
+            Quick overview
+            <section class="splitter-wrapper">
+                <div class="splitter-three solid">dd<br>vc</div>
+                <div class="splitter-three solid">sdf</div>
+                <div class="splitter-three solid">sd</div>
+            </section>
         </div>
 
         <div class="dropdown" id="drop-machines">

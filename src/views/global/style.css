@@ -37,7 +37,7 @@ body, html{
     position: fixed;
     right: 0;
     bottom: 0;
-    background: #f4f4f4;
+    background: #f9f9f9;
     box-sizing: border-box;
     padding: 20px;
 }
@@ -201,27 +201,59 @@ b{font-size: 20px;}
     font-weight: 600
 }
 
+.content-header{
+    height: 44px;
+    width: calc(100% - 7px - 17px);
+    padding: 7px;
+    padding-left: 17px;
+    border-radius: 100px;
+    line-height: 44px;
+    background: white;
+}
+
+.splitter-wrapper{
+    height: 200px;
+    width: calc(100% - 20px);
+    padding: 20px;
+    padding-right: 0;
+    border-radius: 20px;
+    background: white;
+}
+
+.splitter-three.solid{
+    width: calc(33.33% - 20px);
+    border-radius: 12px;
+    background: #f4f4f4;
+    margin-right: 20px;
+}
+
 
 .big-button{
     width: 36px;
     height: 36px;
-    padding: 5px;
+    padding: 4px;
     border-radius: 100px;
-    box-shadow: 0px 6px 10px rgba(0,0,0,.3);
-    display: inline-block;
-    margin-right: 10px;
+    margin-left: 10px;
     transition: .2s ease;
+    background: white;
+    float: right;
+    line-height: 36px;
 }
-.big-button:hover{
+.big-button.red:hover{
     cursor: pointer;
-    box-shadow: 0px 10px 15px rgba(0,0,0,.2);
+    background: #f00;
+    color:white;
 }
-.big-button:active{
-    box-shadow: 0px 2px 4px rgba(0,0,0,.2);
+.big-button.yellow:hover{
+    cursor: pointer;
+    background: #fd0;
+    color:white;
 }
 .big-button.red{
     color: #f00;
+    background: #f001;
 }
 .big-button.yellow{
-    color: #ffd000;
+    color: #ffdd00;
+    background: #fd01;
 }
