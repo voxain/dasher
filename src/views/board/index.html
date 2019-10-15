@@ -6,10 +6,6 @@
         <link rel="stylesheet" href="../global/style.css" />
         <link rel="stylesheet" id="dark_theme" />
         <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.0.96/css/materialdesignicons.min.css" />
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="../global/dropdown.js"></script>
-        <script src="../global/themes.js"></script>
     </head>
     <body>
         <div class="main-header">
@@ -41,16 +37,16 @@
                 <div class="sidebar-icon">
                     <span class="mdi mdi-clock-outline mdi-48px"></span>
                 </div>
-                <b>Uptime</b> 128d 5h 25m
+                <b>Uptime</b> <span id="uptimeInfo">128d 5h 25m</span>
                 <div class="load-bar-outer">
                     <div class="load-bar-inner" style="width: 100%; background: #4cb050;"></div>
                 </div>
             </div>
-            <div class="sidebar-entry">
+            <div class="sidebar-entry" onclick="showContent('cpu')">
                 <div class="sidebar-icon">
                     <span class="mdi mdi-chip mdi-48px"></span>
                 </div>
-                <b>CPU</b> Intel Core i9-9900K
+                <b>CPU</b> <span id="cpuInfo">Intel Core i9-9900K</span>
                 <div class="load-bar-outer">
                     <div class="load-bar-inner" style="width: 50%"></div>
                 </div>
@@ -102,6 +98,15 @@
             </div>
             <div class="sidebar-entry">
                 <div class="sidebar-icon">
+                    <span class="mdi mdi-album mdi-48px"></span>
+                </div>
+                <b>DVD-ROM</b> Windows Server Utilities
+                <div class="load-bar-outer">
+                    <div class="load-bar-inner" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="sidebar-entry">
+                <div class="sidebar-icon">
                     <span class="mdi mdi-harddisk mdi-48px"></span>
                 </div>
                 <b>SATA <span class="mdi mdi-numeric-1-circle-outline"></span></b> 500GB/10TB
@@ -110,7 +115,7 @@
                 </div>
             </div>
             <div class="sidebar-entry">
-                <div class="sidebar-icon">
+                <div class="sidebar-icon red">
                     <span class="mdi mdi-harddisk mdi-48px"></span>
                 </div>
                 <b>SATA <span class="mdi mdi-numeric-2-circle-outline"></span></b> 500GB/10TB
@@ -129,7 +134,7 @@
             </div>
         </div>
 
-        <div class="main-content">
+        <div class="main-content" style="display: block" id="status">
             <div class="content-header">
                 <span class="headline">Viper-Battlestation</span>
                 ONLINE
@@ -139,16 +144,63 @@
                 <div class="big-button yellow">
                     <span class="mdi mdi-refresh mdi-36px"></span>
                 </div>
-            </div>
-
-            <br>All systems full power!<br><br>
-            Quick overview
+            </div><br>
+            Quick overview<br><br>
             <section class="splitter-wrapper">
-                <div class="splitter-three solid">dd<br>vc</div>
-                <div class="splitter-three solid">sdf</div>
-                <div class="splitter-three solid">sd</div>
+                <div class="splitter-three solid">
+                    <div id="gauge-cpu" class="gauge-container three"></div>
+                    CPU
+                </div>
+                <div class="splitter-three solid">
+                    <div id="gauge-ram" class="gauge-container three"></div>
+                    RAM
+                </div>
+                <div class="splitter-three solid">
+                    <div id="gauge-disk" class="gauge-container three"></div>
+                    Disks
+                </div>
             </section>
         </div>
+
+        <div class="main-content" id="cpu">
+            <div class="content-header">
+                <span class="headline">CPU</span>
+                FUNCTIONAL
+                <div class="big-button blue">
+                    <span class="mdi mdi-flash mdi-36px"></span>
+                </div>
+            </div><br>
+            Quick overview<br><br>
+            <section class="splitter-wrapper">
+                <div class="splitter-three solid">
+                    <div id="gauge-cpu-load" class="gauge-container three"></div>
+                    Utilization
+                </div>
+                <div class="splitter-three solid">
+                    <div id="gauge-cpu-clock" class="gauge-container three"></div>
+                    Clock Speed
+                </div>
+                <div class="splitter-three solid">
+                    <div id="gauge-cpu-heat" class="gauge-container three"></div>
+                    Temparature
+                </div>
+            </section><br><br>
+
+            All cores<br>
+            <section class="splitter-wrapper">
+                <div class="splitter-three solid" style="line-height: 200px">
+                    Core 0
+                </div>
+                <div class="splitter-three solid">
+                    <div id="gauge-cpu-0-load" class="gauge-container three"></div>
+                    Utilization
+                </div>
+                <div class="splitter-three solid">
+                    <div id="gauge-cpu-0-heat" class="gauge-container three"></div>
+                    Temparature
+                </div>
+            </section>
+            </div>
 
         <div class="dropdown" id="drop-machines">
             <div class="dropdown-entry">
@@ -177,4 +229,12 @@
             </div>
         </div>
     </body>
+    <footer>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+        <script src="../global/gauge.js"></script>
+        <script src="../global/dropdown.js"></script>
+        <script src="../global/themes.js"></script>
+        <script src="../global/app.js"></script>
+    </footer>
 </html>

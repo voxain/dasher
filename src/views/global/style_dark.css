@@ -62,3 +62,18 @@ body, html{
 .splitter-three.solid{
     background: #343436;
 }
+
+/* ------- Alternate Style ------- */
+.gauge-container.three > .gauge > .dial {
+    stroke: #555;
+    stroke-width: 2;
+  }
+  .gauge-container.three > .gauge > .value {
+    stroke: #eee;
+    stroke-width: 5;
+  }
+  .gauge-container.three > .gauge > .value-text {
+    fill: #eee;
+    font-family: 'Nunito';
+  } 
+  

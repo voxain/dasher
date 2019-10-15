@@ -5,7 +5,7 @@ body, html{
     font-size: 20px;
     padding: 0;
     margin: 0;
-    color: #444;
+    color: #333;
 }
 
 .main-header{
@@ -40,6 +40,7 @@ body, html{
     background: #f9f9f9;
     box-sizing: border-box;
     padding: 20px;
+    display: none;
 }
 
 .header-logo{
@@ -102,6 +103,9 @@ b{font-size: 20px;}
     margin-right: 20px;
     margin-bottom: 7px;
     float: left;
+}
+.sidebar-icon.red{
+    color: red;
 }
 .sidebar-icon.dropdown-icon{
     width: 50px;
@@ -224,6 +228,7 @@ b{font-size: 20px;}
     width: calc(33.33% - 20px);
     border-radius: 12px;
     background: #f4f4f4;
+    text-align: center;
     margin-right: 20px;
 }
 
@@ -249,6 +254,11 @@ b{font-size: 20px;}
     background: #fd0;
     color:white;
 }
+.big-button.blue:hover{
+    cursor: pointer;
+    background: #008fff;
+    color:white;
+}
 .big-button.red{
     color: #f00;
     background: #f001;
@@ -257,3 +267,28 @@ b{font-size: 20px;}
     color: #ffdd00;
     background: #fd01;
 }
+.big-button.blue{
+    color: #008fff;
+    background: #008fff11;
+}
+
+
+.gauge-container{
+    width: 160px;
+    margin-left: calc(50% - 80px);
+}
+
+/* ------- Alternate Style ------- */
+.gauge-container.three > .gauge > .dial {
+  stroke: #bbb;
+  stroke-width: 2;
+}
+.gauge-container.three > .gauge > .value {
+  stroke: #333;
+  stroke-width: 5;
+}
+.gauge-container.three > .gauge > .value-text {
+  fill: #333;
+  font-size: .7em;
+  font-family: 'Nunito';
+} 
